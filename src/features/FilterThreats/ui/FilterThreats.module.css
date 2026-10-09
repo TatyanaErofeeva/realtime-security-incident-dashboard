@@ -1,0 +1,60 @@
+.fieldset {
+  margin: 0;
+  padding: 12px 14px 14px;
+  border: 0;
+  min-inline-size: 0;
+}
+
+.legend {
+  padding: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.option {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.option input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.option input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name[data-threat="DDoS"] {
+  color: #ff5a36;
+}
+
+.name[data-threat="CanBus Injection"] {
+  color: #3ddc97;
+}
+
+.name[data-threat="BruteForce"] {
+  color: #f5c16c;
+}
+
+.count {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}

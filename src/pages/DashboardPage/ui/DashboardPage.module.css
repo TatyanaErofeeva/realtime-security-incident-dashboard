@@ -1,0 +1,119 @@
+.page {
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr) 390px;
+  grid-template-rows: auto minmax(0, 1fr) 250px;
+  grid-template-areas:
+    "header header header"
+    "filters map log"
+    "metrics metrics metrics";
+  gap: 12px;
+  padding: 12px 16px 16px;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  margin: 0;
+}
+
+.stats div {
+  min-width: 72px;
+}
+
+.stats dt {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.stats dd {
+  margin: 2px 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.phase {
+  color: var(--muted);
+}
+
+.phase[data-phase="live"] {
+  color: #3ddc97;
+}
+
+.filters {
+  grid-area: filters;
+}
+
+.map {
+  grid-area: map;
+}
+
+.log {
+  grid-area: log;
+}
+
+.metrics {
+  grid-area: metrics;
+}
+
+.filters,
+.map,
+.log,
+.metrics {
+  min-width: 0;
+  min-height: 0;
+}
+
+@media (max-width: 1100px) {
+  .page {
+    height: auto;
+    min-height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 70vh 420px auto;
+    grid-template-areas:
+      "header"
+      "filters"
+      "map"
+      "log"
+      "metrics";
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .map {
+    min-height: 70vh;
+  }
+
+  .log {
+    min-height: 420px;
+  }
+}

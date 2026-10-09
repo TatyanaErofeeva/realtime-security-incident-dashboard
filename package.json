@@ -1,0 +1,26 @@
+{
+  "name": "real-time-automotive-security-dashboard",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "recharts": "^2.15.4",
+    "use-sync-external-store": "^1.7.0",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.2"
+  }
+}

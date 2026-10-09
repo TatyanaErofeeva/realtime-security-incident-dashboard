@@ -1,0 +1,43 @@
+.legend {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  padding: 6px 10px;
+  background: rgba(9, 9, 11, 0.78);
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #d4d4d8;
+  font-size: 11px;
+}
+
+.swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.swatch[data-threat="DDoS"] {
+  background: #c4b5fd;
+  box-shadow: 0 0 6px #8b5cf6;
+}
+
+.swatch[data-threat="CanBus Injection"] {
+  background: #ff2a2a;
+}
+
+.swatch[data-threat="BruteForce"] {
+  background: #f59e0b;
+  border-radius: 0;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}

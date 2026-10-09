@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #0c1110;
+  color: #d7e4dc;
+  font-family: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+}
+
+.theme-root {
+  --bg: #0c1110;
+  --panel: #141c19;
+  --line: #24312c;
+  --text: #d7e4dc;
+  --muted: #7f948a;
+  --accent: #8fd0ff;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+}
+
+@media (max-width: 1100px) {
+  body {
+    overflow: auto;
+  }
+
+  .theme-root {
+    height: auto;
+    min-height: 100%;
+  }
+}
